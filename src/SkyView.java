@@ -5,11 +5,11 @@ public class SkyView {
     {
         view = new double[numRows][numCols];
         int x = 0;
-        for (int i = 0; i <= numRows; i++)
+        for (int i = 0; i < numRows; i++)
         {
-            if(numRows % 2 == 0)
+            if(i % 2 == 0)
             {
-                for (int j = 0; j <= numCols; j++)
+                for (int j = 0; j < numCols; j++)
                 {
                     view[i][j] = scanned[x];
                     x++;
