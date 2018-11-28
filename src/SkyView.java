@@ -17,13 +17,27 @@ public class SkyView {
             }
             else
             {
-                for (int j = numCols; j >= 0; j++)
+                for (int j = numCols - 1; j >= 0; j--)
                 {
                     view[i][j] = scanned[x];
                     x++;
                 }
             }
         }
+    }
+    
+    public String buildStr ()
+    {
+        String str = "";
+        for (int i = 0; i < view.length; i++)
+        {
+            for (int j = 0; j < view[i].length; j++)
+            {
+                str += view[i][j] + " ";
+            }
+            str += "\n";
+        }
+        return str;
     }
 
     public double getAverage(int startRow, int endRow, int startCol, int endCol)
